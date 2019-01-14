@@ -1518,6 +1518,29 @@ embed, iframe, object {
 }
 
 /*-----------------------------------------------
+12 Breadcrumbs Yoast
+/*---------------------------------------------*/
+#breadcrumbs a {
+	color: #ccc;
+	text-decoration: none;
+}
+
+#breadcrumbs a:hover {
+	text-decoration: underline;
+}
+
+#breadcrumbs span {
+	color: #ccc;
+}
+
+/*-----------------------------------------------
+12 EVC social
+/*---------------------------------------------*/
+.evc-social-likes {
+	margin-top: 20px;
+}
+
+/*-----------------------------------------------
 12 Media Queries
 /*---------------------------------------------*/
 

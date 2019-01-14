@@ -74,7 +74,7 @@ if ( !function_exists( 'realistic_posted' ) ) {
 
 			// Readable dates
 			$date = $format == 'ago'? realistic_time_ago( get_post_time( 'G', true, $post ) ): esc_html( get_the_date() );
-			$modified_date = $format == 'ago'? realistic_time_ago( get_post_modified_time( 'G', true, $post ) ): esc_html( get_the_modified_date() );
+			$modified_date = $format == 'ago'? realistic_time_ago( get_post_modified_time( 'G', false, $post ) ): esc_html( get_the_modified_date() );
 
 			$date_string = sprintf( $pattern,
 				esc_attr( get_the_date( 'c' ) ),
@@ -88,7 +88,7 @@ if ( !function_exists( 'realistic_posted' ) ) {
 			$pattern = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
 			// Readable date
-			$date = $format == 'ago'? realistic_time_ago( get_post_time( 'G', true, $post ) ): esc_html( get_the_date() );
+			$date = $format == 'ago'? realistic_time_ago( get_post_time( 'G', false, $post ) ): esc_html( get_the_date() );
 
 			$date_string = sprintf( $pattern,
 				esc_attr( get_the_date( 'c' ) ),

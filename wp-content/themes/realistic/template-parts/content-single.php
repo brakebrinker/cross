@@ -11,7 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 
 	<header class="entry-header">
 		<?php if ( get_theme_mod( 'post_breadcrumb', '1' ) ) {
-			realistic_breadcrumb();
+//			realistic_breadcrumb();
+            if ( function_exists('yoast_breadcrumb') ) {
+              yoast_breadcrumb( '<p id="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">','</p>' );
+            }
 		} ?>
 
 		<?php the_title( sprintf( '<h1 class="entry-title post-title">', esc_url( get_permalink() ) ), '</h1>' ); ?>
