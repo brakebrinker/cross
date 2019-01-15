@@ -25,6 +25,8 @@ $class = 'no_sidebar' == get_theme_mod( 'sidebar_settings', REALISTIC_SIDEBAR_LA
 			endif;
 		?>
 
+        <?php render_vk_chat($post->post_type); ?>
+
 	<?php endwhile; // End of the loop. ?>
 
 	</main><!-- #main -->

@@ -20,6 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 
 <?php wp_head(); ?>
 
+<?php add_google_analitycs(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>

@@ -233,6 +233,43 @@ if ( !function_exists( 'realistic_custom_comments' ) ) {
 	<?php }
 }
 
+if ( !function_exists( 'render_vk_chat' ) ) {
+	function render_vk_chat( $post_type )
+    {
+        if ($post_type === 'stream') : ?>
+            <script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
+
+            <!-- VK Widget -->
+            <div id="vk_community_messages"></div>
+            <script type="text/javascript">
+                VK.Widgets.CommunityMessages("vk_community_messages", 166236830, {
+                    expanded: "1",
+                    disableExpandChatSound: "1",
+                    disableNewMessagesSound: "1",
+                    disableButtonTooltip: "1"
+                });
+            </script>
+        <?php endif;
+    }
+}
+
+if ( !function_exists( 'add_google_analitycs' ) ) {
+	function add_google_analitycs()
+    {
+    ?>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50659049-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-50659049-3');
+        </script>
+    <?php
+    }
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  That's All, Bye :)
 /*-----------------------------------------------------------------------------------*/	
